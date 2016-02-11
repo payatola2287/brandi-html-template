@@ -53,6 +53,11 @@ textarea {
 /* ==========================================================================
    Layouts
    ========================================================================== */
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
 .wrapper{
     width: 75%;
     min-width: 960px;
@@ -60,6 +65,59 @@ textarea {
 }
 .page-section{
     padding: 50px 0;
+}
+.column-container{
+    display: flex;
+    flex-direction: row;
+}
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+h1,h2,h3,h4,h5,h6,body,a{
+    font-family: "Open Sans";
+    color: #6a737b;
+}
+h1,h2,h3,h4,h5,h6,
+.heading{
+    font-weight: 900;
+    margin-top: 0;
+    color: #062033;
+}
+a{
+    color: #0feb9e;
+}
+
+/* ==========================================================================
+   Icons - Font Awesome
+   ========================================================================== */
+.fa{
+    color: #1eb99a;
+}
+.btn-submit .fa{
+    color: #0eb493;
+}
+.btn-submit:hover .fa{
+    color: #fff;
+}
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn{
+    border: 0;
+    padding: 5px 25px;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+}
+.btn:hover{
+    color: #fff;
+    background: #ccc;
+}
+.btn-submit{
+    background: 0;
+}
+.btn-submit:hover{
+    background: #0eb493;
+    color: #fff;
 }
 /* ==========================================================================
    Header
@@ -74,28 +132,61 @@ textarea {
     position: fixed;
     width: 100%;
 }
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+.form{
+    
+}
+.form-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.form-group:last-child{
+    margin-bottom: 0;
+}
+.form-input:focus{
+    outline: none;
+    outline: 0;
+}
+.form-input{
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 5px 15px;
+}
+.contact-form .form-input[type=text],
+.contact-form .form-input[type=email]{
+    width: 47%;
+    flex: 0 1 auto;
+}
+.contact-form .form-input[name=contact-message]{
+    width: 100%;
+}
+.form-group.btns{
+    justify-content: flex-end;
+}
 
+.form-group .btn:not(:first-child){
+    margin-left: 10px;
+}
 /* ==========================================================================
    Navigation and Menu
    ========================================================================== */
+.main-nav{
+    float:right;
+}
+.menu-toggle{
+    display: none;
+}
 .site-menu,
 .sub-menu{
     list-style: none;
     padding: 0;
     margin: 0;
 }
-.sub-menu{
-    display: none;
-    background: #101636;
-    background: rgba(16,22,54,0.2);
-    position: absolute;
-}
-.menu-item:last-child .sub-menu{
-    right: 0;
-}
-.sub-menu > .menu-item,
-.sub-menu .menu-link{
-    display: block;
+.site-menu a{
+    text-decoration: none;
 }
 .site-menu > .menu-item{
     float: left;
@@ -106,12 +197,40 @@ textarea {
     text-decoration: none;
     color: #2c2c2c;
 }
+.has-child{
+    display: inline-block;
+}
+/*************** 
+ *  Main Menu  *  
+ ***************/
 .main-menu > .menu-item{
     border-top: 2px solid transparent;
 }
 .main-menu > .menu-item:hover,
 .main-menu > .menu-item.selected{
     border-top: 2px solid #32b0ee;
+}
+.main-menu .menu-link{
+    color: #fff;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+/*************** 
+ *  Sub Menu  *  
+ ***************/
+.sub-menu{
+    display: none;
+    background: #101636;
+    background: rgba(16,22,54,0.2);
+    position: absolute;
+}
+.sub-menu > .menu-item,
+.sub-menu .menu-link{
+    display: block;
+}
+.menu-item:last-child .sub-menu{
+    right: 0;
 }
 .sub-menu > .menu-item{
     border-left: 2px solid transparent;
@@ -120,23 +239,72 @@ textarea {
 .sub-menu > .menu-item.selected{
     border-left: 2px solid #32b0ee;
 }
-.has-child{
-    display: inline-block;
-}
 .menu-item:hover .sub-menu{
     display: block;
 }
-.main-nav{
-    float:right;
+
+/*************** 
+ *  Work Menu  *  
+ ***************/
+.work-menu{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
-.menu-toggle{
-    display: none;
+.work-menu > li > a{
+    color: #062033;
+    padding: 5px 25px;
+    font-weight: 700;
 }
-.main-menu .menu-link{
+.work-menu > .selected > a{
+    background: #0eb493;
     color: #fff;
-    text-transform: uppercase;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    border-radius: 10px;
+}
+/******************
+ *  Social Icons  *
+ ******************/
+.social-icons{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.social-icon{
+    padding: 10px;
+    margin: 5px;
+    font-size: 1.5em;
+}
+.social-icon a{
+    color: #fff;
+}
+/*************************
+ *  Member Social Icons  *
+ *************************/
+.personal-social-links{
+    width: 100%;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.personal-social-links .social-icon{
+    background: #000;
+    background: rgba(0,0,0,0.3);
+}
+.personal-social-links .fa{
+    color: #fff;
+}
+/* ==========================================================================
+   Widgets
+   ========================================================================== */
+.widget{
+    width: 25%;
+    flex: 1 1 auto;
+    padding: 0 10px;
+}
+.widget-title,
+.widget-content{
+    color: #fff;
 }
 
 /* ==========================================================================
@@ -160,23 +328,6 @@ textarea {
 }
 
 /* ==========================================================================
-   Social Icons
-   ========================================================================== */
-.social-icons{
-    color: #fff;
-    display: flex;
-    justify-content: center;
-}
-.social-icon{
-    padding: 10px;
-    margin: 5px;
-    font-size: 1.5em;
-}
-.social-icon a{
-    color: #fff;
-}
-
-/* ==========================================================================
    Titles
    ========================================================================== */
 .section-title{
@@ -186,7 +337,6 @@ textarea {
     position: relative;
     text-transform: uppercase;
     color: #0eb493;
-    font-weight: bold;
     background: url('../img/section-title-bg.png') bottom center no-repeat;
     padding-bottom: 10px;
 }
@@ -225,6 +375,7 @@ textarea {
     font-size: 4.1em;
     margin:0;
     font-weight: 100;
+    color: #fff;
 }
 .hero-content h1 + p,
 .strike-background{
@@ -268,14 +419,11 @@ textarea {
    ========================================================================== */
 .icon-box-set{
     display: flex;
-    margin-left: -15px;
-    margin-right: -15px;
     justify-content: space-between;
 }
 .icon-box{
     display: flex;
     width: 30%;
-    float: left;
     align-content: flex-start;
 }
 .icon-box,
@@ -289,7 +437,160 @@ textarea {
 .icon-box .content h3:first-of-type{
     margin: 0;
 }
-
+/* ==========================================================================
+   Thumbnails
+   ========================================================================== */
+.thumbnail-wrapper{
+    overflow: hidden;
+    flex: 1 1 auto;
+    position: relative
+}
+/* ==========================================================================
+   Home Page Sections
+   ========================================================================== */
+.section-description{
+    margin: 0 auto 1em;
+    text-align: center;
+    width: 65%;
+}
+/* ==========================================================================
+   Works
+   ========================================================================== */
+.works-showcase{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    flex-wrap:wrap;
+}
+.work{
+    width: 25%;
+    margin: 0;
+}
+.work-thumbnail{
+    height: 100%;
+    width: auto;
+}
+.work-description{
+    transform: translate(0,100%);
+    transition: transform 0.5s ease;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: #0eb493;
+    background: rgba(14,180,147,0.9);
+    color :#fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.work:hover{
+    cursor: pointer;
+}
+.work:hover .work-description,
+.work-title,
+.site-link .fa{
+    color: #fff;
+}
+.work:hover .work-description{
+    transform: translate(0,0);
+}
+/* ==========================================================================
+   Members
+   ========================================================================== */
+.members{
+    display: flex;
+}
+.members,
+.member-bio{
+    margin: 0;
+}
+.member{
+    margin: 0;
+    width: 20%;
+}
+.member-details{
+    position:absolute;
+    top: 0;
+    background: #0eb493;
+    background: rgba(14,180,147,0.95);
+    transform: translate(0,-100%);
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+}
+.member:hover .member-details{
+    transform: translate(0,0);
+}
+.member-specs{
+    text-align: center;
+}
+.member-specs .name{
+    color: #062033;
+    transition: color 0.5s ease;
+}
+.member:hover .member-specs .name{
+    color: #0eb493;
+}
+.member-specs .position{
+    color: #062033;
+    color: rgba(6,32,51,0.56);
+}
+/* ==========================================================================
+   Facts
+   ========================================================================== */
+.facts-section{
+    background: url('../img/buildings.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.facts-section .icon-box{
+    flex-direction: column;
+    text-align: center;
+}
+.facts-section .icon-box .box-title,
+.facts-section .icon-box .box-content{
+    color: #fff;
+    margin-top: 0;
+    font-weight: 600;
+}
+.facts-section .icon-box .box-title{
+    font-size: 2.5em;
+    margin-bottom: 0;
+}
+.facts-section .icon-box .fa-circle-thin{
+    color: #ffffff;
+    color: rgba(255,255,255,0.4);
+}
+.facts-section .icon-box .fa:not(.fa-circle-thin){
+    color: #ffffff;
+}
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+.contact-details{
+    flex: 1 1 0;
+}
+.contact-form-container{
+    flex: 1 2 auto;
+}
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.main-footer{
+    border-top: 5px solid #062033;
+    background: #1ea78d;
+    padding: 50px 0;
+}
+.widgets-area{
+    display: flex;
+}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
