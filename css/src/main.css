@@ -178,6 +178,15 @@ a{
 }
 .menu-toggle{
     display: none;
+    background: transparent;
+    border: 0;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+.menu-toggle:focus{
+    outline: 0;    
+    outline: none;
 }
 .site-menu,
 .sub-menu{
@@ -445,11 +454,18 @@ a{
     flex: 1 1 auto;
     position: relative
 }
+.thumbnail{
+    width: 100%;
+    height: auto;
+}
+.thumbnail-container{
+    position:relative;
+}
 /* ==========================================================================
    Home Page Sections
    ========================================================================== */
 .section-description{
-    margin: 0 auto 1em;
+    margin: 0 auto 50px;
     text-align: center;
     width: 65%;
 }
@@ -520,7 +536,7 @@ a{
     transform: translate(0,-100%);
     transition: transform 0.5s ease;
     width: 100%;
-    height: 300px;
+    height: 100%;
     text-align: center;
     padding: 10px;
     color: #fff;
@@ -575,10 +591,11 @@ a{
    Contact
    ========================================================================== */
 .contact-details{
-    flex: 1 1 0;
+    flex: 1 1 20%;
+    padding-right: 10px;
 }
 .contact-form-container{
-    flex: 1 2 auto;
+    flex: 1 2 80%;
 }
 /* ==========================================================================
    Footer
@@ -594,11 +611,17 @@ a{
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-
+@media only screen and (max-width: 64em) {
+    
+/* ==========================================================================
+   Layout
+   ========================================================================== */    
+    .wrapper{
+        width: 100%;
+        margin: 0;
+        min-width: 100%;
+    }
 }
-
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 120dpi) {
