@@ -1,4 +1,5 @@
 jQuery(document).ready(function(){
+    windowHeight = $(window).height();
     $('#main-menu a[href*="#"]:not([href="#"])').click(function() {
         $(this).closest(".menu-item").addClass("selected").siblings(".menu-item").removeClass("selected");
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -9,6 +10,19 @@ jQuery(document).ready(function(){
                     scrollTop: target.offset().top
                 }, 450);
                 return false;
+            }
+        }
+    });
+    
+    $(window).scroll(function(){
+        var scroll = $(this).scrollTop();
+        if(!$(".main-header").hasClass("scrolled")){
+            if(scroll >= windowHeight){
+                $(".main-header").addClass("scrolled");
+            }        
+        }else{
+            if(scroll <= windowHeight){
+                $(".main-header").removeClass("scrolled");
             }
         }
     });
