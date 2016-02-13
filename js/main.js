@@ -17,11 +17,11 @@ jQuery(document).ready(function(){
     $(window).scroll(function(){
         var scroll = $(this).scrollTop();
         if(!$(".main-header").hasClass("scrolled")){
-            if(scroll >= windowHeight){
+            if(scroll > windowHeight){
                 $(".main-header").addClass("scrolled");
             }        
         }else{
-            if(scroll <= windowHeight){
+            if(scroll < windowHeight){
                 $(".main-header").removeClass("scrolled");
             }
         }
