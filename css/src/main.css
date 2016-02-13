@@ -621,6 +621,49 @@ a{
         margin: 0;
         min-width: 100%;
     }
+/* ==========================================================================
+   Navigation and Menu
+   ========================================================================== */
+    .main-nav{
+        float: left;
+        width: 100%;
+    }
+    .menu-toggle{
+        display: block;
+    }
+    .site-menu .menu-item{
+        float: none;
+    }
+    /***************
+     *  Main Menu  *
+     ***************/
+    .main-menu{
+        display: none;
+    }
+    .main-menu.open{
+        display: block;
+    }
+    .main-menu > .menu-item{
+        border-top: 0;
+        border-left: 2px solid transparent;
+    }
+    .main-menu > .menu-item.selected,
+    .main-menu > .menu-item:hover{
+        border-top: 0;
+        border-left: 2px solid #32b0ee;
+    }
+/* ==========================================================================
+   Brand
+   ========================================================================== */
+    .brand{
+        width: 100%;
+    }
+    .tagline{
+        display: none;
+    }
+    .site-title{
+        margin-left: 10px;
+    }
 }
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
