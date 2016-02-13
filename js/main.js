@@ -15,7 +15,7 @@ jQuery(document).ready(function(){
     });
     
     $(window).scroll(function(){
-        var scroll = $(this).scrollTop();
+        var scroll = $(this).scrollTop() + 50;
         if(!$(".main-header").hasClass("scrolled")){
             if(scroll > windowHeight){
                 $(".main-header").addClass("scrolled");
