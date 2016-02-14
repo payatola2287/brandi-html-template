@@ -454,17 +454,17 @@ a{
 /* ==========================================================================
    Thumbnails
    ========================================================================== */
-.thumbnail-wrapper{
+.thumbnail-wrapper,
+.thumbnail-container{
     overflow: hidden;
-    flex: 1 1 auto;
     position: relative
+}
+.thumbnail-wrapper{
+    flex: 1 1 auto;
 }
 .thumbnail{
     width: 100%;
     height: auto;
-}
-.thumbnail-container{
-    position:relative;
 }
 /* ==========================================================================
    Home Page Sections
