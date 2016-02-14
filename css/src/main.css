@@ -668,7 +668,8 @@ a{
 /* ==========================================================================
    Icon Box
    ========================================================================== */
-    .icon-box{
+    .icon-box,
+    .column-container{
         flex-direction: column;
         flex-wrap: wrap;
     }
@@ -687,8 +688,25 @@ a{
         height: auto;
     }
 /* ==========================================================================
-   Members
+   Contact Form
    ========================================================================== */
+    .contact-form-container{
+        padding: 35px;
+    }
+    .contact-details,
+    .contact-form-container{
+        text-align: center;
+    }
+/* ==========================================================================
+   Widgets
+   ========================================================================== */
+    .widgets-area{
+        flex-wrap: wrap;
+    }
+    .widget{
+        padding: 0 35px 25px;
+        width: 50%;
+    }
 }
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
