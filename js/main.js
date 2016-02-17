@@ -26,8 +26,12 @@ jQuery(document).ready(function(){
             }
         }
     });
-    
+    $('.animated').viewportChecker({
+        classToAdd : 'fadeInUp'
+    });
     $(".menu-toggle").click(function(){
         $($(this).data('menu')).toggleClass('open');
     });
+    
+    
 });
