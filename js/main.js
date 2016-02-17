@@ -25,6 +25,9 @@ jQuery(document).ready(function(){
                 $(".main-header").removeClass("scrolled");
             }
         }
+        if($("#main-menu").hasClass('open')){
+            $("#main-menu").removeClass('open');
+        }
     });
     $('.animated').viewportChecker({
         classToAdd : 'fadeInUp'
