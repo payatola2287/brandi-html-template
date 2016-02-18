@@ -1,12 +1,53 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 html{
     font-size: 13px;
+    font-family: "Open Sans";
 }
 .browserupgrade {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
+}
+/* ==========================================================================
+    Typography
+   ========================================================================== */
+.navbar-nav>li>a,
+.navbar-text{
+    font-size: 13px;
+}
+/* ==========================================================================
+    Header
+   ========================================================================== */
+/* ==========================================================================
+    Navigation and Menu
+   ========================================================================== */
+.navbar-toggle .icon-bar{
+    background: #0eb493;
+}
+.main-nav{
+    background: #101636;
+    background: rgba(16,22,54,0.2);
+    margin: 0;
+    border: 0;
+}
+.main-nav .navbar-text,
+.main-menu a{
+    color : #fff;
+}
+.main-menu a{
+    border-top: 1px solid transparent;
+}
+.main-menu .active a,
+.main-menu a:hover{
+    border-top: 1px solid #32b0ee;
+}
+.main-menu>li>a:focus,
+.main-menu>li>a:hover{
+    background: 0;
+}
+.navbar-brand{
+    padding-top: 10px;
 }
 /* ==========================================================================
    Media Queries
