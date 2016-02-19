@@ -11,6 +11,18 @@ body{
     padding: 0.2em 0;
 }
 /* ==========================================================================
+    Bootstrap Extends
+   ========================================================================== */
+.no-gutters,
+.no-gutters,
+.no-gutters [class*='col-']{
+    padding: 0;
+}
+.no-gutters .row,
+.no-gutters .row{
+    margin: 0;
+}
+/* ==========================================================================
     Typography
    ========================================================================== */
 .navbar-nav>li>a,
@@ -18,8 +30,64 @@ body{
     font-size: 13px;
 }
 /* ==========================================================================
-    Header
+    Page Sections
    ========================================================================== */
+.page-section{
+    padding: 77px 0 157px;
+}
+.page-section:nth-child(odd){
+    background: #f4f7f9;
+}
+/* ==========================================================================
+    Headers and Titles
+   ========================================================================== */
+.section-header{
+    margin-bottom: 64px;
+}
+.section-title,
+.box-title,
+.title{
+    margin-top: 0;
+}
+.section-title{
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #0eb493;
+}
+.title-divider{
+    font-size: 14px;
+    color: #c2c2c2;
+    position: relative;
+    margin-top: 25px;
+    font-weight: 500;
+}
+.title-divider:before,
+.title-divider:after{
+    content : "________________";
+    position: absolute;
+    color: inherit;
+    left: -130px;
+    right: 0;
+    line-height: 0;
+    font-weight: 100;
+}
+.title-divider:after{
+    left: 0;
+    right: -130px;
+}
+.box-title,
+.title{
+    font-weight: 700;
+    color: #062033;
+    font-size: 20px;
+}
+.section-description{
+    width: 65%;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 600;
+    color : #062033;
+}
 /* ==========================================================================
     Navigation and Menu
    ========================================================================== */
@@ -136,6 +204,30 @@ body{
 .carousel-caption p:after{
     left: initial;
     right: -66px;
+}
+/* ==========================================================================
+    Features
+   ========================================================================== */
+.feature{
+    padding-left: 60px;
+}
+.feature .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #0eb493;
+    border: 1px solid #0eb493;
+    border-radius: 50%;
+    padding: 10px
+}
+.feature h3{
+    margin-top: 0;
+}
+/* ==========================================================================
+    Works
+   ========================================================================== */
+.work{
+    margin: 0;
 }
 /* ==========================================================================
    Media Queries
