@@ -66,14 +66,14 @@ body{
     content : "________________";
     position: absolute;
     color: inherit;
-    left: -130px;
+    left: 130px;
     right: 0;
     line-height: 0;
     font-weight: 100;
 }
 .title-divider:after{
     left: 0;
-    right: -130px;
+    right: 130px;
 }
 .box-title,
 .title{
@@ -87,6 +87,18 @@ body{
     font-size: 18px;
     font-weight: 600;
     color : #062033;
+}
+/* ==========================================================================
+    Icons
+   ========================================================================== */
+.icon{
+    border: 1px solid #fff;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+.icon .fa{
+    font-size: 18px;
 }
 /* ==========================================================================
     Navigation and Menu
@@ -150,6 +162,7 @@ body{
     left: auto;
     right: 45px;
     width: auto;
+    margin: 0;
 }
 .carousel-indicators li,
 .carousel-indicators li.active{
@@ -205,6 +218,7 @@ body{
     left: initial;
     right: -66px;
 }
+
 /* ==========================================================================
     Features
    ========================================================================== */
@@ -228,6 +242,22 @@ body{
    ========================================================================== */
 .work{
     margin: 0;
+}
+.work-description a,
+.work-description{
+    color: #fff;
+}
+.work-description{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0EB493;
+    background: rgba(14,180,147,0.9);
+    padding-top: 40px;
+}
+.work-title{
+    font-weight: 700;
 }
 /* ==========================================================================
    Media Queries
@@ -275,6 +305,15 @@ body{
     visibility: hidden;
 }
 
+.absolute{
+    position: absolute;
+}
+
+.centered{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 /* ==========================================================================
    Float Clearing
    ========================================================================== */
