@@ -154,6 +154,27 @@ body{
     color: #c2c2c2;
     color: rgba(255,255,255,1);
 }
+/*************************
+ *  Category Navigation  *
+ *************************/
+.category-navigation{
+    margin-bottom: 37px;
+}
+/*******************
+ *  Nav Themed  *
+ *******************/
+.nav-themed > li > a{
+    font-size: 14px;
+    font-weight: 700;
+    color: #062033;
+    padding: 10px 20px;
+}
+.nav-themed>li.active>a, 
+.nav-themed>li>a:focus, 
+.nav-themed>li>a:hover{
+    background: #0eb493;
+    color: #fff;
+}
 /***********************************
  *  Bootstrap Carousel Indicators  *
  ***********************************/
@@ -175,6 +196,13 @@ body{
 }
 .carousel-indicators li:last-child{
     margin: 0;
+}
+/*******************
+ *  Bootstrap Nav  *
+ *******************/
+.center-pills{
+    display: flex;
+    justify-content: center;
 }
 /* ==========================================================================
     Bootstrap Carousel
