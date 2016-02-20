@@ -29,6 +29,12 @@ body{
 .navbar-text{
     font-size: 13px;
 }
+h3,.h3{
+    font-weight: 700;
+}
+.font-normal{
+    font-weight: 400;
+}
 /* ==========================================================================
     Page Sections
    ========================================================================== */
@@ -43,6 +49,11 @@ body{
 }
 .page-section:nth-child(odd){
     background: #f4f7f9;
+}
+.facts-section{
+    background: url('../img/buildings.jpg') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 /* ==========================================================================
     Headers and Titles
@@ -94,6 +105,9 @@ body{
     font-weight: 600;
     color : #062033;
 }
+.title{
+    margin-bottom: 38px;
+}
 /* ==========================================================================
     Icons
    ========================================================================== */
@@ -102,9 +116,20 @@ body{
     border-radius: 50%;
     height: 40px;
     width: 40px;
+    position: relative;
 }
 .icon .fa{
     font-size: 18px;
+}
+.icon-large{
+    height: 130px;
+    width: 130px;
+}
+.icon-large .fa{
+    font-size: 36px;
+}
+.icon-x-center{
+    margin: 0 auto;
 }
 /* ==========================================================================
     Navigation and Menu
@@ -160,6 +185,19 @@ body{
     color: #c2c2c2;
     color: rgba(255,255,255,1);
 }
+/***********************
+ *  Form Social Icons  *
+ ***********************/
+.social-icons-form > li > a{
+    color: #062033;
+    color: rgba(6,32,51,0.2);
+    font-size: 18px;
+}
+.social-icons-form > li > a:hover{
+    background: none;
+    color: #062033;
+}
+
 /*************************
  *  Category Navigation  *
  *************************/
@@ -175,7 +213,9 @@ body{
     color: #062033;
     padding: 10px 20px;
 }
-.nav-themed>li.active>a, 
+.nav-themed>li.active>a,
+.nav-themed>li.active>a:focus, 
+.nav-themed>li.active>a:hover,
 .nav-themed>li>a:focus, 
 .nav-themed>li>a:hover{
     background: #0eb493;
@@ -252,7 +292,29 @@ body{
     left: initial;
     right: -66px;
 }
-
+/* ==========================================================================
+    Forms
+   ========================================================================== */
+.theme-control,
+.theme-control:focus{
+    border: 0;
+    box-shadow: none;
+    background: none;
+    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    border-radius: 0;
+    padding: 0 0 21px;
+}
+.theme-control:focus{
+    border-color: #0EB493;
+}
+.btn-theme{
+    background: none;
+}
+.btn-theme .fa{
+    color: #0EB493;
+    margin-right: 10px;
+}
 /* ==========================================================================
     Features
    ========================================================================== */
@@ -293,6 +355,49 @@ body{
 .work-title{
     font-weight: 700;
 }
+
+/* ==========================================================================
+    Members
+   ========================================================================== */
+.member{
+    margin: 0;
+}
+.member-specs .name{
+    font-size: 18px;
+    font-weight: 600;
+    color: #0eb493;
+}
+.member-specs .position{
+    font-size: 13px;
+    color: #062033;
+    color: rgba(6,32,51,0.56);
+}
+/* ==========================================================================
+    Facts
+   ========================================================================== */
+.facts-section .box-title,
+.facts-section .box-content{
+    font-size: 60px;
+    color: #fff;
+}
+.facts-section .box-content{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 300;
+}
+.facts-section .icon{
+    color: #fff;
+}
+/* ==========================================================================
+    Footer
+   ========================================================================== */
+.site-footer{
+    border-top: 5px solid #062033;
+    padding: 99px 0;
+    background: #1ea78d;
+    color: #fff;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
