@@ -35,6 +35,12 @@ body{
 .page-section{
     padding: 77px 0 157px;
 }
+.top-padding{
+    padding: 77px 0 0;
+}
+.bottom-padding{
+    padding: 0 0 157px;
+}
 .page-section:nth-child(odd){
     background: #f4f7f9;
 }
