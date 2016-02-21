@@ -456,7 +456,19 @@ h3,.h3{
    Media Queries
    ========================================================================== */
 @media only screen and (max-width: 64em) {
-
+    .social-icons-form{
+        display: flex;
+        justify-content: center;
+    }
+    .social-icons-form > li{
+        display: inline-block;
+    }
+    .carousel-caption h2{
+        font-size: 48px;
+    }
+    .carousel-caption h3{
+        font-size: 28px;
+    }
 }
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
