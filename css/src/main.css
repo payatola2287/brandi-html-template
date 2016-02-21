@@ -22,6 +22,15 @@ body{
 .no-gutters .row{
     margin: 0;
 }
+.container,
+.container-fluid{
+    margin-top: 97px;
+}
+.container:first-child,
+.container-fluid:first-child{
+    margin-top: 0;
+}
+
 /* ==========================================================================
     Typography
    ========================================================================== */
