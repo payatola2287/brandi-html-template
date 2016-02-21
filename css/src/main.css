@@ -380,6 +380,7 @@ h3,.h3{
    ========================================================================== */
 .work{
     margin: 0;
+    display: none;
 }
 .work-description a,
 .work-description{

@@ -35,4 +35,14 @@ jQuery(document).ready(function(){
     $(".menu-toggle").click(function(){
         $($(this).data('menu')).toggleClass('open');
     });
+    $("#works-showcase .row").mixItUp({
+        selectors : {
+            target : '.work'
+        },
+        callbacks : {
+            onMixEnd(state){
+                console.log(state.activeFilter);
+            }
+        }
+    });
 });
