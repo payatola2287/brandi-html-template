@@ -26,8 +26,8 @@ body{
 .container-fluid{
     margin-top: 97px;
 }
-.container:first-child,
-.container-fluid:first-child{
+.container:first-of-type,
+.container-fluid:first-of-type{
     margin-top: 0;
 }
 
