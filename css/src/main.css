@@ -10,6 +10,54 @@ body{
     color: #000;
     padding: 0.2em 0;
 }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.relative{
+    position: relative;
+}
+
+.centered{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 /* ==========================================================================
     Bootstrap Extends
    ========================================================================== */
@@ -381,6 +429,7 @@ h3,.h3{
 .work{
     margin: 0;
     display: none;
+    overflow: hidden;
 }
 .work-description a,
 .work-description{
@@ -394,6 +443,11 @@ h3,.h3{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transform: translate(-50%, 100%);
+    transition: transform 0.2s linear;
+}
+.work:hover .work-description{
+    transform: translate(-50%, -50%);
 }
 .work-title{
     font-weight: 700;
@@ -404,6 +458,7 @@ h3,.h3{
    ========================================================================== */
 .member{
     margin: 0;
+    overflow: hidden;
 }
 .member-details{
     top: 0;
@@ -416,10 +471,19 @@ h3,.h3{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transform: translate(0,-100%);
+    transition: transform 0.2s ease-out;
+}
+.member:hover .member-details{
+    transform: translate(0,0);
 }
 .member-specs .name{
     font-size: 18px;
     font-weight: 600;
+    color: #062033;
+    transition: color 0.2s ease-out;
+}
+.member:hover .member-specs .name{
     color: #0eb493;
 }
 .member-specs .position{
@@ -477,53 +541,6 @@ h3,.h3{
 
 }
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-.invisible {
-    visibility: hidden;
-}
-
-.absolute{
-    position: absolute;
-}
-
-.relative{
-    position: relative;
-}
-
-.centered{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
 /* ==========================================================================
    Float Clearing
    ========================================================================== */
