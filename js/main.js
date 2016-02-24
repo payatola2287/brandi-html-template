@@ -39,6 +39,9 @@ jQuery(document).ready(function(){
         selectors : {
             target : '.work'
         },
+        layout : {
+            display: 'block'
+        },
         callbacks : {
             onMixEnd(state){
                 console.log(state.activeFilter);
