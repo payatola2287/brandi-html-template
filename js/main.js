@@ -45,4 +45,7 @@ jQuery(document).ready(function(){
             }
         }
     });
+    $("#main-menu .menu-link").click(function(){
+        $(this).closest("li").addClass("active").siblings().removeClass("active");
+    });
 });
