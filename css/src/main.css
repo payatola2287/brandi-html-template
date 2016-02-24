@@ -205,6 +205,10 @@ h3,.h3{
     background: rgba(16,22,54,0.2);
     margin: 0;
     border: 0;
+    transition: background 0.2s linear;
+}
+.main-nav.scrolled{
+    background: #101636;
 }
 .main-nav .navbar-text,
 .main-menu a{

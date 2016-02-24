@@ -16,13 +16,13 @@ jQuery(document).ready(function(){
     
     $(window).scroll(function(){
         var scroll = $(this).scrollTop() + 50;
-        if(!$(".main-header").hasClass("scrolled")){
+        if(!$(".main-nav").hasClass("scrolled")){
             if(scroll > windowHeight){
-                $(".main-header").addClass("scrolled");
+                $(".main-nav").addClass("scrolled");
             }        
         }else{
             if(scroll < windowHeight){
-                $(".main-header").removeClass("scrolled");
+                $(".main-nav").removeClass("scrolled");
             }
         }
         if($("#main-menu").hasClass('open')){
