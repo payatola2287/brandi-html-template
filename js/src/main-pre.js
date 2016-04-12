@@ -38,11 +38,10 @@ jQuery(document).ready(function(){
     $("#works-showcase .row").mixItUp({
         selectors : {
             target : '.work'
-        },
-        callbacks : {
-            onMixEnd: function(state){
-                console.log(state.activeFilter);
-            }
         }
+    });
+    
+    $("#hero-carousel").on('slid.bs.carousel',function(){
+        console.log('wow');
     });
 });
