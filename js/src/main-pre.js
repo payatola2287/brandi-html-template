@@ -42,6 +42,6 @@ jQuery(document).ready(function(){
     });
     
     $("#hero-carousel").on('slid.bs.carousel',function(){
-        console.log('wow');
+        
     });
 });
