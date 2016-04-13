@@ -9,20 +9,6 @@ function doCarouselContentAnimations(elements){
             $this.removeClass($animationType);
         });
     });
-    /*var animEndEv = 'webkitAnimationEnd animationend';
-
-    elems.each(function () {
-        var $this = $(this),
-            $animationType = $this.data('animation');
-
-        // Add animate.css classes to
-        // the elements to be animated 
-        // Remove animate.css classes
-        // once the animation event has ended
-        $this.addClass($animationType).one(animEndEv, function () {
-            $this.removeClass($animationType);
-        });
-    });*/
 }
 
 jQuery(document).ready(function(){
