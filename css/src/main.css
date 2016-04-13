@@ -11,15 +11,15 @@ body{
     padding: 0.2em 0;
 }
 /* ==========================================================================
-Helper classes
+Fonts
 ========================================================================== */
 @font-face {
     font-family: 'icomoon';
-    src:    url('../fonts/icomoon.eot?dwlx3i');
-    src:    url('../fonts/icomoon.eot?dwlx3i#iefix') format('embedded-opentype'),
-        url('../fonts/icomoon.ttf?dwlx3i') format('truetype'),
-        url('../fonts/icomoon.woff?dwlx3i') format('woff'),
-        url('../fonts/icomoon.svg?dwlx3i#icomoon') format('svg');
+    src:    url('fonts/icomoon.eot?9ljerw');
+    src:    url('fonts/icomoon.eot?9ljerw#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?9ljerw') format('truetype'),
+        url('fonts/icomoon.woff?9ljerw') format('woff'),
+        url('fonts/icomoon.svg?9ljerw#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -38,6 +38,18 @@ Helper classes
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+.icon-edit:before {
+    content: "\e900";
+}
+.icon-feather:before {
+    content: "\e901";
+}
+.icon-megaphone:before {
+    content: "\e902";
+}
+
+
 /* ==========================================================================
 Helper classes
 ========================================================================== */
