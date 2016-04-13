@@ -10,10 +10,62 @@ body{
     color: #000;
     padding: 0.2em 0;
 }
+/* ==========================================================================
+Fonts
+========================================================================== */
+@font-face {
+    font-family: 'icomoon';
+    src:    url('../fonts/icomoon.eot?p75vi7');
+    src:    url('../fonts/icomoon.eot?p75vi7#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?p75vi7') format('truetype'),
+        url('../fonts/icomoon.woff?p75vi7') format('woff'),
+        url('../fonts/icomoon.svg?p75vi7#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-trophy:before {
+    content: "\e903";
+}
+.icon-users:before {
+    content: "\e904";
+}
+.icon-clock:before {
+    content: "\e905";
+}
+.icon-edit:before {
+    content: "\e900";
+}
+.icon-feather:before {
+    content: "\e901";
+}
+.icon-megaphone:before {
+    content: "\e902";
+}
+.icon-rocket:before {
+    content: "\e906";
+}
+
 
 /* ==========================================================================
-   Helper classes
-   ========================================================================== */
+Helper classes
+========================================================================== */
 
 .hidden {
     display: none !important;
@@ -59,8 +111,8 @@ body{
     transform: translate(-50%,-50%);
 }
 /* ==========================================================================
-    Bootstrap Extends
-   ========================================================================== */
+Bootstrap Extends
+========================================================================== */
 .no-gutters,
 .no-gutters,
 .no-gutters [class*='col-']{
@@ -80,8 +132,14 @@ body{
 }
 
 /* ==========================================================================
-    Typography
-   ========================================================================== */
+Links
+========================================================================== */
+.nav a:hover {
+    cursor: pointer!important;
+}
+/* ==========================================================================
+Typography
+========================================================================== */
 .navbar-nav>li>a,
 .navbar-text{
     font-size: 13px;
@@ -93,8 +151,8 @@ h3,.h3{
     font-weight: 400;
 }
 /* ==========================================================================
-    Page Sections
-   ========================================================================== */
+Page Sections
+========================================================================== */
 .page-section{
     padding: 77px 0 157px;
 }
@@ -113,14 +171,14 @@ h3,.h3{
     background-size: cover;
 }
 /* ==========================================================================
-    Images
-   ========================================================================== */
+Images
+========================================================================== */
 .img-full{
     width: 100%;
 }
 /* ==========================================================================
-    Headers and Titles
-   ========================================================================== */
+Headers and Titles
+========================================================================== */
 .section-header{
     margin-bottom: 64px;
 }
@@ -172,8 +230,8 @@ h3,.h3{
     margin-bottom: 38px;
 }
 /* ==========================================================================
-    Icons
-   ========================================================================== */
+Icons
+========================================================================== */
 .icon{
     border: 1px solid #fff;
     border-radius: 50%;
@@ -181,6 +239,7 @@ h3,.h3{
     width: 40px;
     position: relative;
 }
+.icon span,
 .icon .fa{
     font-size: 18px;
 }
@@ -188,6 +247,7 @@ h3,.h3{
     height: 130px;
     width: 130px;
 }
+.icon-large span,
 .icon-large .fa{
     font-size: 36px;
 }
@@ -195,8 +255,8 @@ h3,.h3{
     margin: 0 auto;
 }
 /* ==========================================================================
-    Navigation and Menu
-   ========================================================================== */
+Navigation and Menu
+========================================================================== */
 .navbar-toggle .icon-bar{
     background: #0eb493;
 }
@@ -205,11 +265,21 @@ h3,.h3{
     background: rgba(16,22,54,0.2);
     margin: 0;
     border: 0;
+<<<<<<< HEAD
     transition: background 0.2s linear;
 }
 .main-nav.scrolled{
     background: #101636;
+=======
+    transition: background 0.5s ease-out;
+>>>>>>> v1.2.1
 }
+
+.scrolled .main-nav {
+    background: #1ea78d;
+    box-shadow: 0 0 10px 0 #101636;
+}
+
 .main-nav .navbar-text,
 .main-menu a{
     color : #fff;
@@ -229,8 +299,8 @@ h3,.h3{
     padding-top: 10px;
 }
 /******************
- *  Social Icons  *
- ******************/
+*  Social Icons  *
+******************/
 .social-icons{
     position: absolute;
     bottom: 30px;
@@ -253,8 +323,8 @@ h3,.h3{
     color: rgba(255,255,255,1);
 }
 /**************************
- *  Members Social Icons  *
- **************************/
+*  Members Social Icons  *
+**************************/
 .personal-social-links{
     display: flex;
     justify-content: center;
@@ -276,8 +346,8 @@ h3,.h3{
     color: rgba(255,255,255,0.5);
 }
 /***********************
- *  Form Social Icons  *
- ***********************/
+*  Form Social Icons  *
+***********************/
 .social-icons-form > li > a{
     color: #062033;
     color: rgba(6,32,51,0.2);
@@ -289,14 +359,14 @@ h3,.h3{
 }
 
 /*************************
- *  Category Navigation  *
- *************************/
+*  Category Navigation  *
+*************************/
 .category-navigation{
     margin-bottom: 37px;
 }
 /*******************
- *  Nav Themed  *
- *******************/
+*  Nav Themed  *
+*******************/
 .nav-themed > li > a{
     font-size: 14px;
     font-weight: 700;
@@ -312,12 +382,12 @@ h3,.h3{
     color: #fff;
 }
 /***********************************
- *  Bootstrap Carousel Indicators  *
- ***********************************/
+*  Bootstrap Carousel Indicators  *
+***********************************/
 .carousel-indicators{
     top: 50%;
     left: auto;
-    right: 45px;
+    right: 10px;
     width: auto;
     margin: 0;
 }
@@ -334,8 +404,8 @@ h3,.h3{
     margin: 0;
 }
 /*******************
- *  Bootstrap Nav  *
- *******************/
+*  Bootstrap Nav  *
+*******************/
 .center-pills{
     display: flex;
     justify-content: center;
@@ -343,8 +413,8 @@ h3,.h3{
     flex-wrap: wrap;
 }
 /* ==========================================================================
-    Bootstrap Carousel
-   ========================================================================== */
+Bootstrap Carousel
+========================================================================== */
 .carousel-caption{
     top: 50%;
     padding: 0;
@@ -355,12 +425,14 @@ h3,.h3{
 }
 .carousel-caption h2{
     font-size: 62px;
+    animation-delay: 1s;
 }
 .carousel-caption h2 span{
     font-weight: 700;
 }
 .carousel-caption h3{
     font-size: 48px;
+    animation-delay: 2s;
 }
 .carousel-caption h3 span,
 .carousel-caption p:before,
@@ -372,6 +444,7 @@ h3,.h3{
     position: relative;
     margin: 20px 0 0;
     display: inline-block;
+    animation-delay: 3s
 }
 .carousel-caption p:before,
 .carousel-caption p:after{
@@ -389,8 +462,8 @@ h3,.h3{
     height: auto;
 }
 /* ==========================================================================
-    Forms
-   ========================================================================== */
+Forms
+========================================================================== */
 .theme-control,
 .theme-control:focus{
     border: 0;
@@ -412,8 +485,8 @@ h3,.h3{
     margin-right: 10px;
 }
 /* ==========================================================================
-    Features
-   ========================================================================== */
+Features
+========================================================================== */
 .feature{
     padding-left: 60px;
 }
@@ -430,8 +503,8 @@ h3,.h3{
     margin-top: 0;
 }
 /* ==========================================================================
-    Works
-   ========================================================================== */
+Works
+========================================================================== */
 .work{
     margin: 0;
     display: none;
@@ -455,13 +528,15 @@ h3,.h3{
 .work:hover .work-description{
     transform: translate(-50%, -50%);
 }
-.work-title{
+.work-title,
+.work-category{
+    font-family: "Open Sans";
     font-weight: 700;
 }
 
 /* ==========================================================================
-    Members
-   ========================================================================== */
+Members
+========================================================================== */
 .member{
     margin: 0;
     overflow: hidden;
@@ -498,8 +573,8 @@ h3,.h3{
     color: rgba(6,32,51,0.56);
 }
 /* ==========================================================================
-    Facts
-   ========================================================================== */
+Facts
+========================================================================== */
 .facts-section .box-title,
 .facts-section .box-content{
     font-size: 60px;
@@ -514,8 +589,8 @@ h3,.h3{
     color: #fff;
 }
 /* ==========================================================================
-    Footer
-   ========================================================================== */
+Footer
+========================================================================== */
 .site-footer{
     border-top: 5px solid #062033;
     padding: 99px 0;
@@ -524,8 +599,8 @@ h3,.h3{
 }
 
 /* ==========================================================================
-   Media Queries
-   ========================================================================== */
+Media Queries
+========================================================================== */
 @media only screen and (max-width: 64em) {
     .social-icons-form{
         display: flex;
@@ -540,16 +615,24 @@ h3,.h3{
     .carousel-caption h3{
         font-size: 28px;
     }
+
 }
+
+@media only screen and (min-width: 64em) {
+    .carousel-indicators {
+        right: 45px;
+    }
+}
+
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 120dpi) {
 
 }
 
 /* ==========================================================================
-   Float Clearing
-   ========================================================================== */
+Float Clearing
+========================================================================== */
 .site-menu:before,
 .site-menu:after,
 .wrapper:before,
@@ -573,8 +656,8 @@ h3,.h3{
 }
 
 /* ==========================================================================
-   Print styles
-   ========================================================================== */
+Print styles
+========================================================================== */
 
 @media print {
     *,

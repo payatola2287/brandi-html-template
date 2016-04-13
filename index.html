@@ -17,7 +17,7 @@
         <script src="js/vendor/modernizr-2.8.3.min.js" async></script>
         <script src="https://cdn.rawgit.com/scottjehl/picturefill/master/dist/picturefill.min.js" async></script>
     </head>
-    <body id="site">
+    <body id="site" data-spy="scroll" data-target="#main-menu">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -37,10 +37,10 @@
                                 <img src="img/logo.png" title="Brandi" class="logo" alt="Brandi"/>
                             </a>
                         </div>
-                        <p class="tagline navbar-text">
-                            I am your tagline
-                        </p>
                     </header>
+                    <p class="tagline navbar-text">
+                        I am your tagline
+                    </p>
                     <div class="collapse navbar-collapse" id="main-menu">
                         <ul class="site-menu main-menu nav navbar-nav navbar-right">
                             <li class="active menu-item">
@@ -73,43 +73,13 @@
                 </div>
             </nav>
         </header>
-        <!--<section class="hero" id="masthead">
-            <div class="wrapper">
-                <div class="hero-content">
-                    <h1>Meet <strong>Brandi</strong></h1>
-                    <p><span>/creative</span> one page template.</p>
-                    <p class="strike-background">We are a team of professionals</p>
-                    <ul class="site-menu social-icons">
-                        <li class="social-icon menu-item">
-                            <a href="#" class="twitter">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li class="social-icon menu-item">
-                            <a href="#" class="facebook">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li class="social-icon menu-item">
-                            <a href="#" class="googleplus">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                        </li>
-                        <li class="social-icon menu-item">
-                            <a href="#" class="dribble">
-                                <i class="fa fa-dribble"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>-->
-        <div id="carousel-example-generic" class="carousel full-screen-carousel slide" data-ride="carousel">
+        
+        <section id="hero-carousel" class="carousel full-screen-carousel slide">
           <!-- Indicators -->
           <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#hero-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#hero-carousel" data-slide-to="1"></li>
+            <li data-target="#hero-carousel" data-slide-to="2"></li>
           </ol>
 
           <!-- Wrapper for slides -->
@@ -122,9 +92,9 @@
                 <img class="img-full img-responsive" src="img/hero-320.png" alt="">
               </picture>
               <div class="carousel-caption">
-                <h2>Meet <span>Brandi</span>!</h2>
-                <h3><span>/creative</span> one page template.</h3>
-                <p>We are a team of professionals</p>
+                <h2 data-animation = "animated bounceInDown">Meet <span>Brandi</span>!</h2>
+                <h3 data-animation = "animated bounceInUp"><span>/creative</span> one page template.</h3>
+                <p data-animation = "animated bounceInUp">We are a team of professionals</p>
               </div>
             </div>
             <div class="item">
@@ -135,9 +105,9 @@
                 <img class="img-full img-responsive" src="img/hero-320.png" alt="">
               </picture>
               <div class="carousel-caption">
-                <h2>Meet <span>Brandi</span>!</h2>
-                <h3><span>/creative</span> one page template.</h3>
-                <p>We are a team of professionals</p>
+                <h2 data-animation = "animated bounceInDown">Meet <span>Brandi</span>!</h2>
+                <h3 data-animation = "animated bounceInUp"><span>/creative</span> one page template.</h3>
+                <p data-animation = "animated bounceInUp">We are a team of professionals</p>
               </div>
             </div>
             <div class="item">
@@ -148,9 +118,9 @@
                 <img class="img-full img-responsive" src="img/hero-320.png" alt="">
               </picture>
               <div class="carousel-caption">
-                <h2>Meet <span>Brandi</span>!</h2>
-                <h3><span>/creative</span> one page template.</h3>
-                <p>We are a team of professionals</p>
+                <h2 data-animation = "animated bounceInDown">Meet <span>Brandi</span>!</h2>
+                <h3 data-animation = "animated bounceInUp"><span>/creative</span> one page template.</h3>
+                <p data-animation = "animated bounceInUp">We are a team of professionals</p>
               </div>
             </div>
           </div>
@@ -160,7 +130,7 @@
             <li><a href="#"><i class="fa fa-google-plus"></i></a></li>  
             <li><a href="#"><i class="fa fa-dribbble"></i></a></li>  
           </ul>
-        </div>
+        </section>
         <section class="page-section features-section" id="features-section">
             <header class="section-header">
                 <h1 class="section-title text-center">
@@ -174,23 +144,23 @@
                 <div class="row">
                     <div class="feature col-md-4 animated invisible">
                         <div class="icon">
-                          <i class="fa fa-flag absolute centered"></i>
+                          <span class="icon-feather absolute centered"></span>
                         </div>
                         <h3 class="box-title">Branding</h3>
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
                     </div>
                     <div class="feature col-md-4 animated invisible">
                         <div class="icon">
-                          <i class="fa fa-flag absolute centered"></i>
+                          <span class="icon-edit absolute centered"></span>
                         </div>
-                        <h3 class="box-title">Branding</h3>
+                        <h3 class="box-title">Development</h3>
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
                     </div>
                     <div class="feature col-md-4 animated invisible">
                         <div class="icon">
-                          <i class="fa fa-flag absolute centered"></i>
+                            <span class="icon-megaphone absolute centered"></span>
                         </div>
-                        <h3 class="box-title">Branding</h3>
+                        <h3 class="box-title">Consulting</h3>
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
                     </div>
                 </div>
@@ -508,48 +478,48 @@
                     </h1>
                 </header>
                 <div class="row">
-                    <div class="col-md-3 animated invisible text-center">
+                    <div class="fact col-md-3 animated invisible text-center">
                         <div class="icon icon-top icon-large icon-x-center">
-                          <i class="fa fa-flag absolute centered"></i>
+                          <span class="icon-clock absolute centered"></span>
                         </div>
-                        <p class="box-title text-center">
-                            3200
+                        <p class="box-title text-center count-to" data-to = 3200>
+                            0
                         </p>
                         <p class="box-content text-center">
                             hours of work
                         </p>
                     </div>
-                    <div class="col-md-3 animated invisible text-center">
+                    <div class="fact col-md-3 animated invisible text-center">
                         <div class="icon icon-top icon-large icon-x-center">
-                          <i class="fa fa-flag absolute centered"></i>
+                          <span class="icon-users absolute centered"></span>
                         </div>
-                        <p class="box-title text-center">
-                            3200
+                        <p class="box-title text-center count-to" data-to = 120>
+                            0
                         </p>
                         <p class="box-content text-center">
-                            hours of work
+                            satisfied clients
                         </p>
                     </div>
-                    <div class="col-md-3 animated invisible text-center">
+                    <div class="fact col-md-3 animated invisible text-center">
                         <div class="icon icon-top icon-large icon-x-center">
-                          <i class="fa fa-flag absolute centered"></i>
+                          <span class="icon-rocket absolute centered"></span>
                         </div>
-                        <p class="box-title text-center">
-                            3200
+                        <p class="box-title text-center count-to" data-to = 360>
+                            0
                         </p>
                         <p class="box-content text-center">
-                            hours of work
+                            projects delivered
                         </p>
                     </div>
-                    <div class="col-md-3 animated invisible text-center">
+                    <div class="fact col-md-3 animated invisible text-center">
                         <div class="icon icon-top icon-large icon-x-center">
-                          <i class="fa fa-flag absolute centered"></i>
+                          <span class="icon-trophy absolute centered"></span>
                         </div>
-                        <p class="box-title text-center">
-                            3200
+                        <p class="box-title text-center count-to" data-to = 42>
+                            0
                         </p>
                         <p class="box-content text-center">
-                            hours of work
+                            awards won
                         </p>
                     </div>
                 </div>
@@ -669,6 +639,10 @@ consequat.
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.7/jquery.viewportchecker.min.js"></script>
         <script src="https://cdn.jsdelivr.net/jquery.mixitup/2.1.11/jquery.mixitup.min.js"></script>
+        <script src="js/waypoints/jquery.waypoints.min.js"></script>
+        <script src="js/jquery-numerator.js"></script>
+        <script src="js/velocity.js"></script>
+        <script src="js/velocity.ui.js"></script>
         <script src="js/scrollspy.js"></script>        
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
