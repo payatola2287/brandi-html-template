@@ -56,10 +56,6 @@ jQuery(document).ready(function(){
             $("#main-menu").removeClass('open');
         }
     });
-    /*$('.animated').viewportChecker({
-        classToAdd : 'fadeInUp'
-    });*/
-    //,.work,.member,.fact
     $('.feature').waypoint(function(){
             $(this.element).removeClass('invisible').addClass('fadeInUp');
     },{offset: 'bottom-in-view'});
