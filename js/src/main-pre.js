@@ -56,9 +56,30 @@ jQuery(document).ready(function(){
             $("#main-menu").removeClass('open');
         }
     });
-    $('.animated').viewportChecker({
+    /*$('.animated').viewportChecker({
         classToAdd : 'fadeInUp'
-    });
+    });*/
+    //,.work,.member,.fact
+    $('.feature').waypoint(function(){
+            $(this.element).removeClass('invisible').addClass('fadeInUp');
+    },{offset: 'bottom-in-view'});
+    $('.member').waypoint(function(){
+            $(this.element).removeClass('invisible').addClass('fadeInUp');
+    },{offset: 'bottom-in-view'});
+    $('.fact').waypoint(function(){
+            $(this.element).removeClass('invisible').addClass('fadeInUp');
+    },{offset: 'bottom-in-view'});
+    $('.count-to').waypoint(function(){
+        $('.count-to').each(function(){
+            $this = $(this);
+            $countTo = $this.data('to');
+            $(this).numerator({
+                duration: 500,
+                toValue: $countTo
+            });
+        });
+    },{offset: 'bottom-in-view'});
+
     $(".menu-toggle").click(function(){
         $($(this).data('menu')).toggleClass('open');
     });
@@ -85,15 +106,7 @@ jQuery(document).ready(function(){
         doCarouselContentAnimations($animatingElems);
     });
 
-    $('.count-to').each(function(){
-        $this = $(this);
-        $countTo = $this.data('to');
-        $(this).numerator({
-            duration: 10000,
-            toValue: $countTo,
-            onStep: function(now, fx){
-                console.log('The current value is: ' + now);
-            }
-        });
-    });
+
+
+
 });
