@@ -4,7 +4,7 @@ function doCarouselContentAnimations(elements){
     elements.each(function(){
         var $this = $(this),
             $animationType = $this.data('animation');
-        
+
         $this.addClass($animationType).one(animEndEv, function () {
             $this.removeClass($animationType);
         });
@@ -83,5 +83,17 @@ jQuery(document).ready(function(){
         var $animatingElems = $(element.relatedTarget)
         .find("[data-animation ^= 'animated']");
         doCarouselContentAnimations($animatingElems);
+    });
+
+    $('.count-to').each(function(){
+        $this = $(this);
+        $countTo = $this.data('to');
+        $(this).numerator({
+            duration: 10000,
+            toValue: $countTo,
+            onStep: function(now, fx){
+                console.log('The current value is: ' + now);
+            }
+        });
     });
 });
