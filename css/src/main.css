@@ -555,9 +555,6 @@ Media Queries
 }
 
 @media only screen and (min-width: 64em) {
-    .carousel-caption {
-        top: 60%;
-    }
     .carousel-indicators {
         right: 45px;
     }
