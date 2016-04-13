@@ -42,21 +42,25 @@ jQuery(document).ready(function(){
             $("#main-menu").removeClass('open');
         }
     });
+    
     $('.feature').waypoint(function(){
             $(this.element).removeClass('invisible').addClass('fadeInUp');
     },{offset: 'bottom-in-view'});
+    
     $('.member').waypoint(function(){
             $(this.element).removeClass('invisible').addClass('fadeInUp');
     },{offset: 'bottom-in-view'});
+    
     $('.fact').waypoint(function(){
             $(this.element).removeClass('invisible').addClass('fadeInUp');
     },{offset: 'bottom-in-view'});
+    
     $('.count-to').waypoint(function(){
         $('.count-to').each(function(){
             $this = $(this);
             $countTo = $this.data('to');
             $(this).numerator({
-                duration: 500,
+                duration: 1000,
                 toValue: $countTo
             });
         });
