@@ -239,6 +239,7 @@ Icons
     width: 40px;
     position: relative;
 }
+.icon span,
 .icon .fa{
     font-size: 18px;
 }
@@ -246,7 +247,8 @@ Icons
     height: 130px;
     width: 130px;
 }
-.icon-large span{
+.icon-large span,
+.icon-large .fa{
     font-size: 36px;
 }
 .icon-x-center{
