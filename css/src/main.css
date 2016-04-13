@@ -10,7 +10,6 @@ body{
     color: #000;
     padding: 0.2em 0;
 }
-
 /* ==========================================================================
 Helper classes
 ========================================================================== */
@@ -364,12 +363,14 @@ Bootstrap Carousel
 }
 .carousel-caption h2{
     font-size: 62px;
+    animation-delay: 1s;
 }
 .carousel-caption h2 span{
     font-weight: 700;
 }
 .carousel-caption h3{
     font-size: 48px;
+    animation-delay: 2s;
 }
 .carousel-caption h3 span,
 .carousel-caption p:before,
@@ -381,6 +382,7 @@ Bootstrap Carousel
     position: relative;
     margin: 20px 0 0;
     display: inline-block;
+    animation-delay: 3s
 }
 .carousel-caption p:before,
 .carousel-caption p:after{

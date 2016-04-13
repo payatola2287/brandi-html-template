@@ -1,3 +1,30 @@
+function doCarouselContentAnimations(elements){
+    var animEndEv = 'webkitAnimationEnd animationend';
+
+    elements.each(function(){
+        var $this = $(this),
+            $animationType = $this.data('animation');
+        
+        $this.addClass($animationType).one(animEndEv, function () {
+            $this.removeClass($animationType);
+        });
+    });
+    /*var animEndEv = 'webkitAnimationEnd animationend';
+
+    elems.each(function () {
+        var $this = $(this),
+            $animationType = $this.data('animation');
+
+        // Add animate.css classes to
+        // the elements to be animated 
+        // Remove animate.css classes
+        // once the animation event has ended
+        $this.addClass($animationType).one(animEndEv, function () {
+            $this.removeClass($animationType);
+        });
+    });*/
+}
+
 jQuery(document).ready(function(){
     windowHeight = $(window).height();
     $('#main-menu a[href*="#"]:not([href="#"])').click(function() {
@@ -13,7 +40,7 @@ jQuery(document).ready(function(){
             }
         }
     });
-    
+
     $(window).scroll(function(){
         var scroll = $(this).scrollTop() + 50;
         if(!$(".main-header").hasClass("scrolled")){
@@ -40,8 +67,21 @@ jQuery(document).ready(function(){
             target : '.work'
         }
     });
-    
-    $("#hero-carousel").on('slid.bs.carousel',function(){
-        
+
+    var $heroCarousel = $('#hero-carousel');
+
+    $heroCarousel.carousel({
+        interval: 4000
+    });
+
+    var $heroOnloadElements = $heroCarousel.find('.item:first').find('[data-animation ^= "animated"]')
+
+    doCarouselContentAnimations($heroOnloadElements);
+
+
+    $("#hero-carousel").on('slide.bs.carousel',function(element){
+        var $animatingElems = $(element.relatedTarget)
+        .find("[data-animation ^= 'animated']");
+        doCarouselContentAnimations($animatingElems);
     });
 });
