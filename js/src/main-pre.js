@@ -10,9 +10,21 @@ function doCarouselContentAnimations(elements){
         });
     });
 }
-
+jQuery(window).resize(function(){
+        if(Modernizr.mq('all and (min-width: 768px)')){
+            $('.reveal-footer .site-footer').prev().css('marginBottom',footerHeight);
+        }else if(Modernizr.mq('all and (max-width: 768px)')){
+            $('.reveal-footer .site-footer').prev().css('marginBottom',0);
+        }
+});
 jQuery(document).ready(function(){
     windowHeight = $(window).height();
+    footerHeight = $('.site-footer').outerHeight();
+    
+        if(Modernizr.mq('all and (min-width: 768px)')){
+            $('.reveal-footer .site-footer').prev().css('marginBottom',footerHeight);
+        }
+    
     $('#main-menu a[href*="#"]:not([href="#"])').click(function() {
         $(this).closest(".menu-item").addClass("selected").siblings(".menu-item").removeClass("selected");
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

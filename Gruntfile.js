@@ -13,8 +13,10 @@ module.exports = function(grunt) {
         },
         postcss: {
             options: {
+                parser: require('postcss-scss'),
                 map: true,
                 processors: [
+                    require('precss')({ /* options */ }),
                     require('autoprefixer')({
                         browsers: ['last 2 versions']
                     })

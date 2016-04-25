@@ -10,7 +10,7 @@
     Themecurve
         - for the awesome freebie
 
-# TECHNOLOGY COLOPHON
+# TECHNOLOGY
 
     HTML5, CSS3
     jQuery, Modernizr,

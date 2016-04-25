@@ -34,7 +34,7 @@ Fonts
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-    
+
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -130,6 +130,14 @@ Bootstrap Extends
 .container-fluid:first-of-type{
     margin-top: 0;
 }
+.theme-input-group {
+    .form-control,
+    .input-group-addon{
+        border: 0;
+        background: 0;
+    }
+}
+
 
 /* ==========================================================================
 Links
@@ -155,6 +163,7 @@ Page Sections
 ========================================================================== */
 .page-section{
     padding: 77px 0 157px;
+    background: #fff;
 }
 .top-padding{
     padding: 77px 0 0;
@@ -265,14 +274,11 @@ Navigation and Menu
     background: rgba(16,22,54,0.2);
     margin: 0;
     border: 0;
-<<<<<<< HEAD
     transition: background 0.2s linear;
 }
 .main-nav.scrolled{
     background: #101636;
-=======
     transition: background 0.5s ease-out;
->>>>>>> v1.2.1
 }
 
 .scrolled .main-nav {
@@ -509,6 +515,12 @@ Works
     margin: 0;
     display: none;
     overflow: hidden;
+    width: 100%;
+}
+@media all and (min-width: 992px) {
+    .work{
+        width: 25%;
+    }
 }
 .work-description a,
 .work-description{
@@ -589,13 +601,82 @@ Facts
     color: #fff;
 }
 /* ==========================================================================
+Widgets
+========================================================================== */
+.widget {
+    margin-bottom: 15px;
+}
+@media all and ( min-width: 992px ) {
+    .widget {
+        margin-bottom: 0;
+    }
+}
+.widget-link-list {
+    ul:not(:first-child) {
+        margin-left: 15px;
+    }
+}
+.widget-newsletter {
+    .theme-input-group {
+        border: 3px solid #fff;
+        border-radius: 5px;
+
+        .form-control,
+        .input-group-addon {
+            color: #fff;
+        }
+    }
+}
+
+/* ==========================================================================
 Footer
 ========================================================================== */
+@media all and (min-width: 768px){
+    .reveal-footer {
+        .site-footer {
+            position: fixed;
+            width:  100%;
+            bottom: 0;
+            z-index: -100;
+        }
+    }
+}
+
+
 .site-footer{
     border-top: 5px solid #062033;
     padding: 99px 0;
     background: #1ea78d;
     color: #fff;
+
+    .widget-title {
+        margin-bottom: 45px;
+        font-size: 14px;
+        color: #fff;
+        opacity: .8;
+        line-height: 27px;
+    }
+
+    .widget-content > * {
+        margin-bottom: 23px; 
+    }
+
+    a {
+        &:hover,
+        & {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    .disclaimer a,
+    .copyright {
+        color: #062033;
+    }
+
+    .disclaimer {
+        border-left: 1px solid #062033;
+        border-left: 1px solid rgba(6,32,51,0.3);
+    }
 }
 
 /* ==========================================================================
